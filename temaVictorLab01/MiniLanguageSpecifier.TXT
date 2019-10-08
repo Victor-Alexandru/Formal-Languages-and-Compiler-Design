@@ -10,7 +10,6 @@ C-Victor language
 	 		- separators [ ] { }   ; space ,  . :
 	 		- reserved words:
 	    			int begin end char if else  char read write for set in begindeclaration enddeclaration beginexecution endexecution add
-		then var while write
       		b.identifiers
 	     		identifier = letter[{letter | digit}]
 	     		letter = "A" | "B" | . ..| "Z"|"a" | "b" | ... | "z"
@@ -34,7 +33,7 @@ C-Victor language
 		declaration = type Identifier ";"
 		type = "int" | "char" | "set"
 		stmtlist = assignstmt | iostmt |  forstmt | ifstmt
-		assignstmt = variableassignstmt | setasignstmt
+		assignstmt = variableassignstmt | setasignstmt	
 		variableassignstmt = identifier "=" expression ";"  | identifier "=" charExpression ";"
 		charExpression = "'" letter "'"
 		expression = expression operation expression | term
@@ -93,9 +92,10 @@ C-Victor language
 		add -> 34
  		
 		RULES (CONDITIONS):
-		identifiers can contain maximum 8 letters
+		identifiers can contain maximum 8 characters
 		the identifier in the for in loop must not exist in the simbol table,will be addded , and when it will be out of scope it will be removed from the table
 		set can only be iterate in a for in loop
+		set have a maximum size of 10 numbers
 		
 		
 
