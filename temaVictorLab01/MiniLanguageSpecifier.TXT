@@ -7,7 +7,7 @@ C-Victor language
       Lexic:
       		a.Special symbols, representing:
 	 		- operators + - * / = < <= = >= != ==
-	 		- separators [ ] { }   ; space ,  . :
+	 		- separators [ ] { }  ( ) ; space ,  . :
 	 		- reserved words:
 	    			int begin end char if else  char read write for set in begindeclaration enddeclaration beginexecution endexecution add
       		b.identifiers
