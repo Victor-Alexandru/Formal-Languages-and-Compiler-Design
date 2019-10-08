@@ -92,8 +92,12 @@ C-Victor language
 		endexecution -> 33
 		add -> 34
  		
+		RULES (CONDITIONS):
+		identifiers can contain maximum 8 letters
+		the identifier in the for in loop must not exist in the simbol table,will be addded , and when it will be out of scope it will be removed from the table
+		set can only be iterate in a for in loop
 		
-			
+		
 
    
 
