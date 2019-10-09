@@ -6,10 +6,10 @@ C-Victor language
       (Other characters will result in a lexic error)
       Lexic:
       		a.Special symbols, representing:
-	 		- operators + - * / = < <= = >= != ==
-	 		- separators [ ] { }  ( ) ; space ,  . :
+	 		- operators + - * / = < <= = >= != == ++ --
+	 		- separators [ ] { }  ( ) ; space   , . 
 	 		- reserved words:
-	    			int begin end char if else  char read write for set in begindeclaration enddeclaration beginexecution endexecution add
+	    			int  char if else  char read write for set   main
       		b.identifiers
 	     		identifier = letter[{letter | digit}]
 	     		letter = "A" | "B" | . ..| "Z"|"a" | "b" | ... | "z"
@@ -22,33 +22,42 @@ C-Victor language
 				digit = "0"|nonzeroDigit
 	 		2.character (aka char)
 	     			character:='letter'|'digit'
-	 		3.set (aka my user defined tipe,can be only with integer)
+	 		3.set == array (aka my user defined tipe,can be only with integer)
 	      			set = "("[int_list]")"
 				int_list = integer {"," integer}
  2.2 Syntax:
 	a) Sintactical Rules:
 	The words - predefined tokens are specified between " and ":
-		program = "begin" "begindeclaration" decllist "enddeclaration" "beginexecution" stmtlist "endexecution" "end"
-                decllist = declaration | { declaration }
-		declaration = type Identifier ";"
-		type = "int" | "char" | "set"
-		stmtlist = assignstmt | iostmt |  forstmt | ifstmt
-		assignstmt = variableassignstmt | setasignstmt	
+	
+		program = "int main ()" "{" stmtlist "}"
+		stmtlist = stmt{stmt}
+		stmt = declstmt | assignstmt | iostmt  | forstmt | ifstmt
+		declstmt = vardeclstmt | arraydeclstmt
+		vardeclstmt = type identifier";"
+		arraydeclstmt = "int" identifier"["nonzero_digit"]"";"
+		type = "int" | "char"
+		assignstmt = variableassignstmt | arrayasignstmt
 		variableassignstmt = identifier "=" expression ";"  | identifier "=" charExpression ";"
-		charExpression = "'" letter "'"
-		expression = expression operation expression | term
-		operation = "+" | "-" | "*" | "/" 
-		term = identifier | digit
-		setassignstmt = identifier".""add""(" integer")"";"
+		charExpression = "'"letter"'"
+		arrayassignstmt = identifier"["digit"]" "=" expression";"
 		iostmt = input | output
 		input = "read""(" identifier ")"";"
 		output = "write""(" expression ")"";"
-		ifstmt = "if""(" condition ")""{" stmtlist "}" [ "else""{" stmtlist "}" ] 
-		forstmt = "for" indetifier " in " set "{" stmtlist "}" 
+		ifstmt = "if""(" condition ")""{" stmtlist "}" [ "else""{" stmtlist "}" ]
+		forstmt = "for""(" varassignstmt "," condition "," varmodifystmt ")""{" stmtlist "}"
+		varmodifystmt = varindentstmt | vardecrementstmt
+		varindentstmt = identifier"++"
+		vardecrementstmt = identifier"--"
 		condition = expression
+		expression = expression operation expression | term
+		operation = "+" | "-" | "*" | "/" 
+		term = identifier | const
+		const = nonzero_digit{digit}
+		
+
 
 	b) lexical rules:
-			identifier = letter[{letter | digit}]
+			identifier = letter{letter | digit}
 	     		letter = "A" | "B" | . ..| "Z"|"a" | "b" | ... | "z"
 	     		digit = "0" | "1" |...| "9"
 			RELATION = "<" | "<=" | "==" | "!=" | ">=" | ">" 
@@ -67,7 +76,7 @@ C-Victor language
 		; -> 10
 		if -> 11
 		for -> 12
-		in -> 13
+		++ ->13
 		= -> 14
 		== -> 15
 		!= -> 16
@@ -82,20 +91,17 @@ C-Victor language
 		write -> 25
 		read -> 26
 		else -> 27
-		begin-> 28
-		end-> 29
-		begindeclaration -> 29
-		enddeclaration -> 30
-		set -> 31
-		beginexecution -> 32
-		endexecution -> 33
-		add -> 34
+		set -> 28
+		beginexecution -> 29
+		endexecution -> 30
+		-- -> 31
+		main ->3 2
  		
 		RULES (CONDITIONS):
-		identifiers can contain maximum 8 characters
-		the identifier in the for in loop must not exist in the simbol table,will be addded , and when it will be out of scope it will be removed from the table
-		set can only be iterate in a for in loop
-		set have a maximum size of 10 numbers
+		There are some illegal characters : "_" and "/" and ":" and "\"
+		The relation can be only between numbers
+		identifiers can contain maximum 8 haracters and can not contain '_'
+		set/array have a maximum size of 10 numbers
 		
 		
 

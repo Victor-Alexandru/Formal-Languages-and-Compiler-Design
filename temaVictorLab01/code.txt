@@ -1,0 +1,9 @@
+int main() {
+       int a =15;
+       int b = 250;
+       char v = '1'
+       char b = '12';
+       int barchar[9];
+       int b[8];
+       int dwq;
+}
