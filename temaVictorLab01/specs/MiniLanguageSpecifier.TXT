@@ -98,7 +98,7 @@ C-Victor language
 		main ->3 2
  		
 		RULES (CONDITIONS):
-		There are some illegal characters : "_" and "/" and ":" and "\"
+		There are some illegal characters : "_" and "/" and ":"
 		The relation can be only between numbers
 		identifiers can contain maximum 8 haracters and can not contain '_'
 		set/array have a maximum size of 10 numbers
