@@ -3,13 +3,23 @@ from SortedList import SortedList
 
 class SymbolTable:
     def __init__(self):
-        self.__sortedList = SortedList()
+        self.__sortedListIdentifiers = SortedList()
+        self.__sortedListConstants = SortedList()
 
-    def add(self, value):
-        return self.__sortedList.add(value)
+    def addIdentifier(self, value):
+        return self.__sortedListIdentifiers.add(value)
 
-    def get(self, value):
-        return self.__sortedList.getId(value)
+
+    def addConstants(self, value):
+        return self.__sortedListConstants.add(value)
+
+
+    def getI(self, value):
+        return self.__sortedListIdentifiers.getId(value)
+
+
+    def getC(self, value):
+        return self.__sortedListConstants.getId(value)
 
     def __str__(self):
-        return str(self.__sortedList)
+        return str(str(self.__sortedListIdentifiers) + "\n" + str(self.__sortedListConstants) )

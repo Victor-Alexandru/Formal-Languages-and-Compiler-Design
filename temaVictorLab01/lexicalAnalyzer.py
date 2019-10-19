@@ -42,10 +42,10 @@ class VCompiler:
                         if token in separators + operators + reservedWords:
                                 pif.add(codification[token], -1)
                         elif isIdentifier(token):
-                                id = symbolTable.add(token)
+                                id = symbolTable.addIdentifier(token)
                                 pif.add(codification['identifier'], id)
                         elif isConstant(token):
-                                id = symbolTable.add(token)
+                                id = symbolTable.addConstants(token)
                                 pif.add(codification['constant'], id)
                         else:
                                 raise VCompilerIllegalCharacterUsedError(
