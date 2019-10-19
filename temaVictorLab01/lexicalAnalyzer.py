@@ -2,7 +2,7 @@ import re
 from language_specification import codification, separators, operators, reservedWords
 from pif import ProgramInternalForm
 from symbol_table import SymbolTable
-from main_item import Scanner
+from main_item.Scanner import Scanner
 
 
 def isIdentifier(token):
@@ -30,37 +30,35 @@ class VCompiler:
 
     def lexic_analyzer(self):
         with open(self.file) as f:
-            # print(codification)
-            # all_code_to_one_character = " ".join(
-            #     [line.strip() for line in f.readlines()])
-            # self.check_if_rules_are_applied(all_code_to_one_character)
-            #
-            # lineNo = 0
             symbolTable = SymbolTable()
             pif = ProgramInternalForm()
-
             s = Scanner()
-
+            lineNo = 0
             for line in f:
-                print([token for token in s.tokenGenerator(line, separators)])
+                   lineNo += 1
+                   for token in s.tokenGenerator(line[0:-1], separators):
+                       #this is the proffessors algorith on the Lecture
+                        # print(token)    
+                        if token in separators + operators + reservedWords:
+                                pif.add(codification[token], -1)
+                        elif isIdentifier(token):
+                                id = symbolTable.add(token)
+                                pif.add(codification['identifier'], id)
+                        elif isConstant(token):
+                                id = symbolTable.add(token)
+                                pif.add(codification['constant'], id)
+                        else:
+                                raise VCompilerIllegalCharacterUsedError(
+                                    'Unknown token ' + token + ' at line ' + str(lineNo))
+            
+            print('Program Internal Form: \n', pif)
+            print('Symbol Table: \n', symbolTable)
 
-            # symbolTable = SymbolTable()
-            # pif = ProgramInternalForm()
-            #
-            # for line in f:
-            #        lineNo += 1
-            #        for token in s.tokenGenerator(line[0:-1], separators):
-            #               if token in separators + operators + reservedWords:
-            #                      pif.add(codification[token], -1)
-            #               elif isIdentifier(token):
-            #                      id = symbolTable.add(token)
-            #                      pif.add(codification['identifier'], id)
-            #               elif isConstant(token):
-            #                      id = symbolTable.add(token)
-            #                      pif.add(codification['constant'], id)
-            #               else:
-            #                      raise Exception('Unknown token ' + token + ' at line ' + str(lineNo))
+            print('\n\nCodification table: ')
+            for e in codification:
+                print(e, " -> ", codification[e])
 
 
-victor_compiler = VCompiler("code.txt")
+
+victor_compiler = VCompiler("code2.txt")
 victor_compiler.lexic_analyzer()

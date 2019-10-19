@@ -8,6 +8,7 @@ class Scanner:
         pass
 
     def isPartOfOperator(self, word):
+        #trivial function to check if the word is in operators
         for op in operators:
             if word in op:
                 return True
@@ -17,12 +18,14 @@ class Scanner:
         return False if index == 0 else line[index - 1] == '\\'
 
     def isIdentifier(self, token):
+        #check if we match the maximum of 8 charachters
         return re.match(r'^[a-zA-Z]([a-zA-Z]|[0-9]|_){,7}$', token) is not None
 
     def isConstant(self, token):
         return re.match('^(0|[\+\-]?[1-9][0-9]*)$|^\'.\'$|^\".*\"$', token) is not None
 
     def getStringToken(self, line, index):
+        #here we we take what is left before the \n character
         token = ''
         quoteCount = 0
 
@@ -35,6 +38,7 @@ class Scanner:
         return token, index
 
     def getOperatorToken(self, line, index):
+        #here we look ahead and see if the following will be an operator
         token = ''
 
         while index < len(line) and self.isPartOfOperator(line[index]):
@@ -49,6 +53,7 @@ class Scanner:
 
         while index < len(line):
             if line[index] == '"':
+                #if we have a variable it will concat with the \n on the last line
                 if token:
                     yield token
                 token, index = self.getStringToken(line, index)

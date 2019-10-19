@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e0ad38f-ffde-4a9a-bc29-c014ada6eda7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SortedList.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/language_specification.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main_item/Scanner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pif.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/symbol_table.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MiniLanguageSpecifier.TXT" beforeDir="false" afterPath="$PROJECT_DIR$/specs/MiniLanguageSpecifier.TXT" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lexicalAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lexicalAnalyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +78,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="209" />
     <option name="y" value="19" />
     <option name="width" value="1237" />
@@ -116,6 +110,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lexicalAnalyzer.py" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -172,16 +167,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1571165752607</updated>
-      <workItem from="1571165754135" duration="3004000" />
+      <workItem from="1571165754135" duration="3062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3004000" />
+    <option name="totallyTimeSpent" value="3062000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
