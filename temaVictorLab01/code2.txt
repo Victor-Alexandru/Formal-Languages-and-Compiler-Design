@@ -1,7 +1,7 @@
 int main() {
        int a = - 15 ;
-       int b = 250;
-       char v = '9'
+       int b = +250;
+       char v = '#'
        int barchar[9];
        int b[8];
        int viena;

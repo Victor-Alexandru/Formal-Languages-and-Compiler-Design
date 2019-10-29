@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e0ad38f-ffde-4a9a-bc29-c014ada6eda7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/language_specification.py" beforeDir="false" afterPath="$PROJECT_DIR$/language_specification.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lexicalAnalyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/lexicalAnalyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/specs/MiniLanguageSpecifier.TXT" beforeDir="false" afterPath="$PROJECT_DIR$/specs/MiniLanguageSpecifier.TXT" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lexicalAnalyzer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+            <state relative-caret-position="300">
+              <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -27,7 +26,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/language_specification.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="58">
               <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
@@ -36,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/code2.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            <state relative-caret-position="75">
+              <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -87,6 +86,7 @@
         <option value="$PROJECT_DIR$/symbol_table.py" />
         <option value="$PROJECT_DIR$/main_item/Scanner.py" />
         <option value="$PROJECT_DIR$/language_specification.py" />
+        <option value="$PROJECT_DIR$/specs/MiniLanguageSpecifier.TXT" />
         <option value="$PROJECT_DIR$/code2.txt" />
         <option value="$PROJECT_DIR$/lexicalAnalyzer.py" />
       </list>
@@ -126,6 +126,11 @@
               <item name="temaVictorLab01" type="b2602c69:ProjectViewProjectNode" />
               <item name="temaVictorLab01" type="462c0819:PsiDirectoryNode" />
               <item name="main_item" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="temaVictorLab01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="temaVictorLab01" type="462c0819:PsiDirectoryNode" />
+              <item name="specs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -193,12 +198,12 @@
       <updated>1571165752607</updated>
       <workItem from="1571165754135" duration="3062000" />
       <workItem from="1572292173025" duration="76000" />
-      <workItem from="1572377547180" duration="1968000" />
+      <workItem from="1572377547180" duration="2549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5106000" />
+    <option name="totallyTimeSpent" value="5687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -231,13 +236,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/specs/MiniLanguageSpecifier.TXT">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-782">
-          <caret line="11" column="69" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pif.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -276,24 +274,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/specs/MiniLanguageSpecifier.TXT">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="62" column="36" selection-start-line="62" selection-start-column="36" selection-end-line="62" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/language_specification.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="58">
           <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/code2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        <state relative-caret-position="75">
+          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lexicalAnalyzer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="42" column="32" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
+        <state relative-caret-position="300">
+          <caret line="14" column="71" selection-start-line="14" selection-start-column="71" selection-end-line="14" selection-end-column="71" />
         </state>
       </provider>
     </entry>

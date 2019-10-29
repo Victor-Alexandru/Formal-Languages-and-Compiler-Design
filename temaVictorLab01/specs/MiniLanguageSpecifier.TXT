@@ -60,7 +60,7 @@ C-Victor language
 			identifier = letter{letter | digit}
 	     		letter = "A" | "B" | . ..| "Z"|"a" | "b" | ... | "z"
 	     		digit = "0" | "1" |...| "9"
-			RELATION = "<" | "<=" | "==" | "!=" | ">=" | ">" 
+			RELATION = "<" | "<=" | "!=" | ">=" | ">"
 	Codification table:
 		
 		identifier -> 0

@@ -10,6 +10,8 @@ def isIdentifier(token):
 
 
 def isConstant(token):
+    if not re.match("^[a-zA-Z0-9_]*$", token):
+        return False
     return re.match('^(0|[\+\-]?[1-9][0-9]*)$|^\'.\'$|^\".*\"$', token) is not None
 
 
@@ -55,6 +57,7 @@ class VCompiler:
                         id = symbolTable.addIdentifier(token)
                         pif.add(codification['identifier'], id)
                     elif isConstant(token):
+                        print(token)
                         if wasMinusBehind:
                             token = "-" + token
                         else:
