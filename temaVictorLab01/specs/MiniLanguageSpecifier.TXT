@@ -76,7 +76,6 @@ C-Victor language
 		; -> 10
 		if -> 11
 		for -> 12
-		++ ->13
 		= -> 14
 		== -> 15
 		!= -> 16
@@ -94,7 +93,6 @@ C-Victor language
 		set -> 28
 		beginexecution -> 29
 		endexecution -> 30
-		-- -> 31
 		main ->3 2
  		
 		RULES (CONDITIONS):

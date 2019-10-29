@@ -1,8 +1,8 @@
 int main() {
        int a = - 15 ;
        int b = +250;
-       char v = '#'
-       int barchar[9];
+       char v = '2'
+       int barchard[9];
        int b[8];
        int viena;
        int c = dwd+cwq;
