@@ -34,30 +34,43 @@ class VCompiler:
             pif = ProgramInternalForm()
             s = Scanner()
             lineNo = 0
+            wasMinusBehind = False
             for line in f:
-                   lineNo += 1
-                   for token in s.tokenGenerator(line[0:-1], separators):
-                       #this is the proffessors algorith on the Lecture
-                        # print(token)    
-                        if token in separators + operators + reservedWords:
-                                pif.add(codification[token], -1)
-                        elif isIdentifier(token):
-                                id = symbolTable.addIdentifier(token)
-                                pif.add(codification['identifier'], id)
-                        elif isConstant(token):
-                                id = symbolTable.addConstants(token)
-                                pif.add(codification['constant'], id)
+                lineNo += 1
+                for token in s.tokenGenerator(line[0:-1], separators):
+                    # this is the proffessors algorith on the Lecture
+                    if token == " ":
+                        continue
+                    if token in separators + operators + reservedWords:
+                        if token != "-":
+                            wasMinusBehind = False
+                        if token == "-":
+                            wasMinusBehind = True
+                        pif.add(codification[token], -1)
+                    elif isIdentifier(token):
+                        if wasMinusBehind:
+                            token = "-" + token
                         else:
-                                raise VCompilerIllegalCharacterUsedError(
-                                    'Unknown token ' + token + ' at line ' + str(lineNo))
-            
-            print('Program Internal Form: \n', pif)
-            print('Symbol Table: \n', symbolTable)
+                            wasMinusBehind = False
+                        id = symbolTable.addIdentifier(token)
+                        pif.add(codification['identifier'], id)
+                    elif isConstant(token):
+                        if wasMinusBehind:
+                            token = "-" + token
+                        else:
+                            wasMinusBehind = False
+                        id = symbolTable.addConstants(token)
+                        pif.add(codification['constant'], id)
+                    else:
+                        raise VCompilerIllegalCharacterUsedError(
+                            'Unknown token ' + token + ' at line ' + str(lineNo))
 
-            print('\n\nCodification table: ')
-            for e in codification:
-                print(e, " -> ", codification[e])
+        print('Program Internal Form: \n', pif)
+        print('Symbol Table: \n', symbolTable)
 
+        print('\n\nCodification table: ')
+        for e in codification:
+            print(e, " -> ", codification[e])
 
 
 victor_compiler = VCompiler("code2.txt")
