@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8e0ad38f-ffde-4a9a-bc29-c014ada6eda7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scanner.uml" beforeDir="false" afterPath="$PROJECT_DIR$/Scanner.uml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,135 +28,13 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pif.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="uml://Python/#D:/LFTC victor/temaVictorLab01/pif.py">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>Python</ID>
-              <OriginalElement>#D:/LFTC victor/temaVictorLab01/pif.py</OriginalElement>
-              <nodes>
-                <node x="0.0" y="0.0">object</node>
-                <node x="-396.5" y="230.0">pif.ProgramInternalForm</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="pif.ProgramInternalForm" target="object">
-                  <point x="0.0" y="-58.0" />
-                  <point x="0.0" y="245.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-360.5" y="44.0" />
-              <SelectedNodes>
-                <node>pif.ProgramInternalForm</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Methods</Category>
-                <Category>Inner Classes</Category>
-                <Category>Fields</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/symbol_table.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SortedList.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="29" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="uml://Python/SortedList.SortedList">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>Python</ID>
-              <OriginalElement>SortedList.SortedList</OriginalElement>
-              <nodes>
-                <node x="0.0" y="0.0">object</node>
-                <node x="25.5" y="540.0">SortedList.SortedList</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="SortedList.SortedList" target="object">
-                  <point x="0.0" y="-80.0" />
-                  <point x="0.0" y="245.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="88.5" y="224.0" />
-              <SelectedNodes>
-                <node>SortedList.SortedList</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Methods</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lexicalAnalyzer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-366">
-              <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#9#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/symbol_table.png">
+        <entry file="file://$PROJECT_DIR$/SortedList.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Scanner.uml">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>Python</ID>
-              <OriginalElement>main_item.Scanner.Scanner</OriginalElement>
-              <nodes>
-                <node x="0.5" y="429.0">main_item.Scanner.Scanner</node>
-                <node x="0.0" y="0.0">object</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="main_item.Scanner.Scanner" target="object">
-                  <point x="0.0" y="-101.5" />
-                  <point x="0.0" y="189.5" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="1.0" x="-353.0" y="20.0" />
-              <SelectedNodes>
-                <node>main_item.Scanner.Scanner</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Methods</Category>
-                <Category>Inner Classes</Category>
-              </Categories>
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Scanner.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -205,10 +84,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="209" />
-    <option name="y" value="19" />
-    <option name="width" value="1237" />
-    <option name="height" value="1033" />
+    <option name="x" value="207" />
+    <option name="y" value="17" />
+    <option name="width" value="1239" />
+    <option name="height" value="1035" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -293,16 +172,18 @@
       <workItem from="1572292173025" duration="76000" />
       <workItem from="1572377547180" duration="4797000" />
       <workItem from="1572390199984" duration="331000" />
+      <workItem from="1572416556481" duration="714000" />
+      <workItem from="1572417694296" duration="1284000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8266000" />
+    <option name="totallyTimeSpent" value="10264000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2647453" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -385,6 +266,7 @@
             <Category>Methods</Category>
             <Category>Inner Classes</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -405,13 +287,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pif.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="uml://Python/#D:/LFTC victor/temaVictorLab01/pif.py">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -428,7 +303,7 @@
               <point x="0.0" y="245.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-360.5" y="44.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-360.0" y="44.0" />
           <SelectedNodes>
             <node>pif.ProgramInternalForm</node>
           </SelectedNodes>
@@ -437,13 +312,7 @@
             <Category>Inner Classes</Category>
             <Category>Fields</Category>
           </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/symbol_table.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -468,16 +337,10 @@
             <node>symbol_table.SymbolTable</node>
           </SelectedNodes>
           <Categories>
-            <Category>Fields</Category>
             <Category>Methods</Category>
+            <Category>Fields</Category>
           </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SortedList.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="29" selection-end-line="22" />
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -498,49 +361,10 @@
           <settings layout="Hierarchic Group" zoom="1.0" x="238.0" y="438.0" />
           <SelectedNodes />
           <Categories>
+            <Category>Methods</Category>
             <Category>Fields</Category>
-            <Category>Methods</Category>
           </Categories>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lexicalAnalyzer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-366">
-          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/symbol_table.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Scanner.uml">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>Python</ID>
-          <OriginalElement>main_item.Scanner.Scanner</OriginalElement>
-          <nodes>
-            <node x="0.5" y="429.0">main_item.Scanner.Scanner</node>
-            <node x="0.0" y="0.0">object</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="main_item.Scanner.Scanner" target="object">
-              <point x="0.0" y="-101.5" />
-              <point x="0.0" y="189.5" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-353.0" y="20.0" />
-          <SelectedNodes>
-            <node>main_item.Scanner.Scanner</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Methods</Category>
-            <Category>Inner Classes</Category>
-          </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
     </entry>
@@ -560,16 +384,82 @@
               <point x="0.0" y="245.0" />
             </edge>
           </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="88.5" y="224.0" />
+          <settings layout="Hierarchic Group" zoom="1.0" x="89.0" y="224.0" />
           <SelectedNodes>
             <node>SortedList.SortedList</node>
           </SelectedNodes>
           <Categories>
-            <Category>Fields</Category>
             <Category>Methods</Category>
+            <Category>Fields</Category>
           </Categories>
+          <SCOPE>All</SCOPE>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symbol_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SortedList.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="29" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lexicalAnalyzer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="39" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symbol_table.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scanner.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>Python</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="0.5" y="429.0">main_item.Scanner.Scanner</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="-353.0" y="20.0" />
+          <SelectedNodes>
+            <node>main_item.Scanner.Scanner</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Inner Classes</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pif.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pif.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SortedList.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scanner.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
   </component>
 </project>
