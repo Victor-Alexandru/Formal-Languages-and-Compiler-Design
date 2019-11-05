@@ -14,7 +14,6 @@ class Grammar:
             E = Grammar.parseLine(file.readline())
             S = file.readline().split('=')[1].strip()
             P = Grammar.parseRules(Grammar.parseLine(''.join([line for line in file])))
-
             return Grammar(N, E, P, S)
 
     @staticmethod
