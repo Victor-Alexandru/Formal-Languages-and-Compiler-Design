@@ -1,32 +1,20 @@
 class Grammar:
+    def get_production_for(self, nonTerminal):
+        if not self.isNonTerminal(nonTerminal):
+            raise Exception('Can only show productions for non-terminals')
+
+        return [prod for prod in self.P if prod[0] == nonTerminal]
+
+    def production_for_a_non_terminal(self, nonTerminal):
+        productions = self.get_production_for(nonTerminal)
+        print(', '.join([' -> '.join(prod) for prod in productions]))
+
     @staticmethod
-    def parseLine(line):
+    def read_the_line(line):
         return [value.strip() for value in line.strip().split('=')[1].strip()[1:-1].strip().split(',')]
 
     @staticmethod
-    def parseConsole(line):
-        return [value.strip() for value in line.strip()[1:-1].strip().split(',')]
-
-    @staticmethod
-    def fromFile(fileName):
-        with open(fileName) as file:
-            N = Grammar.parseLine(file.readline())
-            E = Grammar.parseLine(file.readline())
-            S = file.readline().split('=')[1].strip()
-            P = Grammar.parseRules(Grammar.parseLine(''.join([line for line in file])))
-            return Grammar(N, E, P, S)
-
-    @staticmethod
-    def fromConsole():
-        N = Grammar.parseConsole(input('N = '))
-        E = Grammar.parseConsole(input('E = '))
-        S = input('S = ')
-        P = Grammar.parseRules(Grammar.parseConsole(input('P = ')))
-
-        return Grammar(N, E, P, S)
-
-    @staticmethod
-    def parseRules(rules):
+    def read_the_production(rules):
         result = []
 
         for rule in rules:
@@ -38,6 +26,30 @@ class Grammar:
                 result.append((lhs, value))
 
         return result
+
+    @staticmethod
+    def parseConsole(line):
+        return [value.strip() for value in line.strip()[1:-1].strip().split(',')]
+
+    @staticmethod
+    def fromFile(fileName):
+        with open(fileName) as file:
+            N = Grammar.read_the_line(file.readline())
+            E = Grammar.read_the_line(file.readline())
+            S = file.readline().split('=')[1].strip()
+            P = Grammar.read_the_production(Grammar.read_the_line(''.join([line for line in file])))
+            return Grammar(N, E, P, S)
+
+    @staticmethod
+    def fromConsole():
+        N = Grammar.parseConsole(input('N = '))
+        E = Grammar.parseConsole(input('E = '))
+        S = input('S = ')
+        P = Grammar.read_the_production(Grammar.parseConsole(input('P = ')))
+
+        return Grammar(N, E, P, S)
+
+ 
 
     @staticmethod
     def fromFiniteAutomata(fa):
@@ -73,9 +85,12 @@ class Grammar:
         return value in self.E
 
     def isRegular(self):
-        usedInRhs = dict()
-        notAllowedInRhs = list()
-
+        '''
+        verifiy  if the grammar is right liner
+        and S does not appear in the right hand side of the produc
+        '''
+        usedInRhs = {}
+        notAllowedInRhs = []
         for rule in self.P:
             lhs, rhs = rule
             hasTerminal = False
@@ -102,16 +117,7 @@ class Grammar:
 
         return True
 
-    def getProductionsFor(self, nonTerminal):
-        if not self.isNonTerminal(nonTerminal):
-            raise Exception('Can only show productions for non-terminals')
-
-        return [prod for prod in self.P if prod[0] == nonTerminal]
-
-    def showProductionsFor(self, nonTerminal):
-        productions = self.getProductionsFor(nonTerminal)
-
-        print(', '.join([' -> '.join(prod) for prod in productions]))
+    
 
     def __str__(self):
         return 'N = { ' + ', '.join(self.N) + ' }\n' \

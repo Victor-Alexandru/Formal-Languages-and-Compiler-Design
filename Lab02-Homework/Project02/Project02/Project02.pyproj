@@ -29,7 +29,7 @@
     <Folder Include="model\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fa1.txt" />
+    <Content Include="finiteAutomata.txt" />
     <Content Include="regularGrammar.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />

@@ -1,37 +1,37 @@
 class FiniteAutomata:
     @staticmethod
-    def parseLine(line):
+    def read_line(line):
         return [value.strip() for value in line.strip().split('=')[1].strip()[1:-1].strip().split(',')]
 
     @staticmethod
-    def parseConsole(line):
+    def read_console(line):
         return [value.strip() for value in line.strip()[1:-1].strip().split(',')]
 
     @staticmethod
-    def fromFile(fileName):
+    def from_file(fileName):
         with open(fileName) as file:
-            Q = FiniteAutomata.parseLine(file.readline())
-            E = FiniteAutomata.parseLine(file.readline())
+            Q = FiniteAutomata.read_line(file.readline())
+            E = FiniteAutomata.read_line(file.readline())
             q0 = file.readline().split('=')[1].strip()
-            F = FiniteAutomata.parseLine(file.readline())
+            F = FiniteAutomata.read_line(file.readline())
 
-            S = FiniteAutomata.parseTransitions(FiniteAutomata.parseLine(''.join([line for line in file])))
-
+            S = FiniteAutomata.read_transitions(FiniteAutomata.read_line(''.join([line for line in file])))
+            print(Q,E,q0,F,S)
             return FiniteAutomata(Q, E, S, q0, F)
 
     @staticmethod
     def fromConsole():
-        Q = FiniteAutomata.parseConsole(input('Q = '))
-        E = FiniteAutomata.parseConsole(input('E = '))
+        Q = FiniteAutomata.read_console(input('Q = '))
+        E = FiniteAutomata.read_console(input('E = '))
         q0 = input('q0 = ')
-        F = FiniteAutomata.parseConsole(input('F = '))
+        F = FiniteAutomata.read_console(input('F = '))
 
-        S = FiniteAutomata.parseTransitions(FiniteAutomata.parseConsole(input('S = ')))
+        S = FiniteAutomata.read_transitions(FiniteAutomata.read_console(input('S = ')))
 
         return FiniteAutomata(Q, E, S, q0, F)
 
     @staticmethod
-    def parseTransitions(parts):
+    def read_transitions(parts):
         result = []
         transitions = []
         index = 0
@@ -96,8 +96,4 @@ class FiniteAutomata:
         print('{ ' + ' '.join([' -> '.join([str(part) for part in trans]) for trans in transitions]) + ' }')
 
     def __str__(self):
-        return 'Q = { ' + ', '.join(self.Q) + ' }\n' \
-               + 'E = { ' + ', '.join(self.E) + ' }\n' \
-               + 'F = { ' + ', '.join(self.F) + ' }\n' \
-               + 'S = { ' + ', '.join([' -> '.join([str(part) for part in trans]) for trans in self.S]) + ' }\n' \
-               + 'q0 = ' + str(self.q0) + '\n'
+        return 'Q = { ' + ', '.join(self.Q) + ' }\n' + 'E = { ' + ', '.join(self.E) + ' }\n' + 'F = { ' + ', '.join(self.F) + ' }\n' + 'S = { ' + ', '.join([' -> '.join([str(part) for part in trans]) for trans in self.S]) + ' }\n' + 'q0 = ' + str(self.q0) + '\n'
