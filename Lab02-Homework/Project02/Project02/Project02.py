@@ -9,7 +9,7 @@ if __name__ == '__main__':
     print(grammar)
     print("----------------------------------------------------------")
     print("2.Production for the grammar and no_terminal A ------------------")
-    grammar.production_for_a_non_terminal('A')
+    grammar.production_for_a_non_terminal('S')
     print("----------------------------------------------------------")
 
     print("3.Finite Automata ------------------")
@@ -17,8 +17,10 @@ if __name__ == '__main__':
     print(finiteAutomata)
     print("----------------------------------------------------------")
 
-    print("3.Is regular and then  compute Fa-----------------------------------------")
+    #print("3.Is regular and then  compute Fa-----------------------------------------")
     grammar = Grammar.fromFile('regularGrammar.txt')
+
+    #grammar  = Grammar.fromConsole()
 
     if grammar.isRegular():
         finiteAutomata = FiniteAutomata.fromRegularGrammar(grammar)
@@ -30,7 +32,7 @@ if __name__ == '__main__':
     # Finite Automata -> Regular Grammar
 
     print("4.From Fa compute the grammar =====================================================")
-    finiteAutomata = FiniteAutomata.from_file('finiteAutomata.txt')
+    finiteAutomata = FiniteAutomata.fromConsole()
     grammar = Grammar.fromFiniteAutomata(finiteAutomata)
     print(grammar)
     print("====================================================================")

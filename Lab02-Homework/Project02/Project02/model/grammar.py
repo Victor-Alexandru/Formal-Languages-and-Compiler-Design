@@ -28,7 +28,7 @@ class Grammar:
         return result
 
     @staticmethod
-    def parseConsole(line):
+    def read_from_console_line(line):
         return [value.strip() for value in line.strip()[1:-1].strip().split(',')]
 
     @staticmethod
@@ -38,15 +38,20 @@ class Grammar:
             E = Grammar.read_the_line(file.readline())
             S = file.readline().split('=')[1].strip()
             P = Grammar.read_the_production(Grammar.read_the_line(''.join([line for line in file])))
+            print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
+            print(N,E,S,P)
+            print("&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&")
             return Grammar(N, E, P, S)
 
     @staticmethod
     def fromConsole():
-        N = Grammar.parseConsole(input('N = '))
-        E = Grammar.parseConsole(input('E = '))
+        N = Grammar.read_from_console_line(input('N = '))
+        print(N)
+        E = Grammar.read_from_console_line(input('E = '))
+        print(E)
         S = input('S = ')
-        P = Grammar.read_the_production(Grammar.parseConsole(input('P = ')))
-
+        print(S)
+        P = Grammar.read_the_production(Grammar.read_from_console_line(input('P = ')))
         return Grammar(N, E, P, S)
 
  
