@@ -1,0 +1,102 @@
+C-Victor language ContextFreeGrammar
+G=(N,E,P,S) where
+N->Set of nonterminals
+E->Set of terminals
+P->production
+S->starting symbol
+
+N = {
+    program
+    stmtlist
+    stmt
+    declstmt
+    vardeclstmt
+    arraydeclstmt
+    type
+    assignstmt
+    variableassignstmt
+    charExpression
+    arrayassignstmt
+    iostmt
+    input
+    output
+    ifstmt
+    forstmt
+    varmodifystmt
+    varindentstmt
+    vardecrementstmt
+    condition
+    expression
+    operation
+    term
+    const
+    identifier
+    nonzero_digit
+	digit
+}
+
+E = {
+    int,
+    main,
+    (,
+    ),
+    {,
+    {,
+    char,
+    [,
+    ],
+    ;,
+    if,
+    for,
+    =,
+    ==,
+    !=,
+    <,
+    <=,
+    >,
+    >=,
+    +,
+    -,
+    *,
+    /,
+    write,
+    read,
+    else,
+	a..z,
+	A..Z,
+	0..9
+}
+S = program
+
+P =  {
+    program -> int main(){stmtlist},
+	stmtlist -> stmtlist|stmt,
+	stmt -> declstmt|assignstmt|iostmt|whilestmt|forstmt|ifstmt,
+	declstmt -> vardeclstmt|arraydeclstmt
+	vardeclstmt -> type identifier;
+	arraydeclstmt -> type identifier[nonzero_digit];
+	type -> int|char
+	assignstmt -> varassignstmt|arrayasignstmt
+	varassignstmt -> identifier=expression;
+	arrayassignstmt -> identifier[digit]=expression;
+	iostmt -> input|output
+	input -> read(identifier);
+	output -> write(expression);
+	ifstmt -> if(condition){stmtlist}|if(condition){stmtlist}else{stmtlist}
+	forstmt -> for(varassignstmt;condition;varmodifystmt){stmtlist}
+	identifier -> letter|letterdigit|letternonzerodigit
+	letter = A|B|...|Z|a|b|...|z|
+	digit = 0|1|...|9
+    nonzerodigit = 1|...|9
+}
+
+
+
+
+
+
+
+
+
+
+
