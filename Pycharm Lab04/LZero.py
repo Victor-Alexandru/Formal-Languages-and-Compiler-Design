@@ -166,3 +166,45 @@ class LZero:
                 self.__output.insert(0, str(reducedState))
 
         return self.__output
+
+    def get_derivation_string(self, input_sequence):
+        output_stack = self.parse(input_sequence)
+        sequence_string = "S -> "
+        sequence_two = "S -> "
+        derv_stack = ""
+        print(self.__grammar.P)
+        for derivation in output_stack:
+            sequence_string += str(self.__grammar.P[int(derivation)][1]) + "  -> "
+
+            if derv_stack:
+                if (len(self.__grammar.P[int(derivation)][1]) == 2):
+                    derv_stack = derv_stack[:len(derv_stack) - 1]
+                    derv_stack += self.__grammar.P[int(derivation)][1][0] + self.__grammar.P[int(derivation)][1][
+                        1]
+                else:
+                    derv_stack = derv_stack[:len(derv_stack) - 1]
+                    derv_stack += self.__grammar.P[int(derivation)][1][0]
+            else:
+                derv_stack = self.__grammar.P[int(derivation)][1][0] + self.__grammar.P[int(derivation)][1][
+                    1]
+
+            sequence_two += derv_stack + "  ->  "
+
+        return sequence_two
+
+    def get_derivation_string_program(self, input_sequence):
+        output_stack = self.parse(input_sequence)
+        sequence_string = "S -> "
+        sequence_two = "S -> "
+        derv_stack = []
+        print(self.__grammar.P)
+        for derivation in output_stack:
+
+            if derv_stack:
+                derv_stack[-1].pop()
+                derv_stack.append(
+                    [derv_stack[-1][0], self.__grammar.P[int(derivation)][0], self.__grammar.P[int(derivation)][1][0]])
+            else:
+                derv_stack.append([self.__grammar.P[int(derivation)][0], self.__grammar.P[int(derivation)][1][0]])
+
+        return derv_stack

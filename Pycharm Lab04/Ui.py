@@ -34,8 +34,7 @@ class Ui:
                 lr0 = LZero(g)
 
                 print(lr0.parse(input_sequence_list))
-                for derivation in lr0.parse(input_sequence_list):
-                    print(g.P[int(derivation)])
+                print(lr0.get_derivation_string(input_sequence_list))
             if cmd == 2 :
                 scanner = Scanner()
                 identifierTable = SymbolTable()
@@ -85,7 +84,7 @@ class Ui:
 
                 print(lr0.parse(inputStack))
 
-                for derivation in lr0.parse(inputStack):
-                    print(g.P[int(derivation)])
+                #SEQUENCE OF DERIVATIONS IN CURSU 6
+                print(lr0.get_derivation_string_program(inputStack))
 
 
