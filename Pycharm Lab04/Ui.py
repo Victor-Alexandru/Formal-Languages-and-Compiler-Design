@@ -34,6 +34,8 @@ class Ui:
                 lr0 = LZero(g)
 
                 print(lr0.parse(input_sequence_list))
+                for derivation in lr0.parse(input_sequence_list):
+                    print(g.P[int(derivation)])
             if cmd == 2 :
                 scanner = Scanner()
                 identifierTable = SymbolTable()
@@ -83,5 +85,7 @@ class Ui:
 
                 print(lr0.parse(inputStack))
 
+                for derivation in lr0.parse(inputStack):
+                    print(g.P[int(derivation)])
 
 

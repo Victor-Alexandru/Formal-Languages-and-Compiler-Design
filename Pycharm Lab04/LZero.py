@@ -115,7 +115,7 @@ class LZero:
         table = self.getTable()
         for action in table:
             if len(action['action'].split("")) >= 3:
-                raise  Exception("Grammar has conflicts")
+                raise Exception("Grammar has conflicts")
 
     def parse(self, inputSequence):
         table = self.getTable()
