@@ -1,6 +1,6 @@
 from grammar import *
 from language_specification import *
-from Lr0Parser import *
+from LZero import *
 from symbol_table import  SymbolTable
 from pif import  ProgramInternalForm
 from Scanner import  Scanner
@@ -31,7 +31,7 @@ class Ui:
                     input_sequence_list.append(char)
 
                 g = Grammar.fromFile("grammar.txt")
-                lr0 = Lr0Parser(g)
+                lr0 = LZero(g)
 
                 print(lr0.parse(input_sequence_list))
             if cmd == 2 :
@@ -71,12 +71,13 @@ class Ui:
                     print(code, ' : ', inverseCodification[code])
 
                 inputStack = [str(code) for code in pif.getCodes()]
+
                 print(inputStack)
 
                 g = Grammar.fromFile("my_grammar.txt")
                 g.P = [('S1', ['.', g.S])] + g.P
                 g.N += ['S1']
-                lr0 = Lr0Parser(g)
+                lr0 = LZero(g)
 
                 print(g)
 

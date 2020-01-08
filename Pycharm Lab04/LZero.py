@@ -1,4 +1,4 @@
-class Lr0Parser:
+class LZero:
 
     def __init__(self, grammar):
         self.__grammar = grammar
