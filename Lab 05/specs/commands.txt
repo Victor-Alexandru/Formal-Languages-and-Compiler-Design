@@ -1,4 +1,6 @@
->lex spec.l
->yacc -d spec.y
->cc lex.yy.c y.tab.c -o rezultat -lfl
->rezultat.exe
+>lex viena.l
+>yacc -d viena.y
+>cc lex.yy.c viena.tab.c -o viena
+>viena.exe
+
+
