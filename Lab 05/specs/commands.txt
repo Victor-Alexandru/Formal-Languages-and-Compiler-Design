@@ -1,0 +1,4 @@
+>lex spec.l
+>yacc -d spec.y
+>cc lex.yy.c y.tab.c -o rezultat -lfl
+>rezultat.exe
